@@ -1,5 +1,5 @@
 angular.module('GreetingApp')
-.controller('GreetingNewYearController', ['$scope', GreetingNewYearController]);
+.controller('GreetingNewYearController', ['$scope', '$timeout', GreetingNewYearController]);
 
 var greetingNewYearList = [
 	{
@@ -84,6 +84,26 @@ var greetingNewYearList = [
 	}
 ];
 
-function GreetingNewYearController($scope) {
+function GreetingNewYearController($scope, $timeout) {
+
+	// 초기 속성 설정
+	$scope.message = 'Tab Card';
+	$scope.lang     = '━';
+	$scope.showing  = true;
+
+	// 메소드 설정
+	$scope.greeting = function () {
+		$scope.showing  = false;
+		$scope.message = 'Wait a Minute...';
+
+		var random = Math.floor(Math.random()*greetingNewYearList.length);
+
+		$timeout(function() {
+			$scope.message = greetingNewYearList[random].message;
+			$scope.lang = greetingNewYearList[random].lang;
+			$scope.showing  = true;
+		}, 1000);
+
+	};
 
 }
