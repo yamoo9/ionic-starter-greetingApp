@@ -1,0 +1,50 @@
+/*
+
+.pane {
+	background-color: black;
+}
+
+.center-content {
+	display:         flex;
+	align-items:     center;
+	justify-content: center;
+	flex-direction:  column;
+}
+
+.logo {
+	height:        150px;
+	width:         150px;
+	margin-top:    -50px;
+	margin-bottom: 50px;
+	transition:    all 0.15s ease-out;
+}
+
+.logo:active {
+	transform: scale(0.9);
+}
+
+.greeting {
+	text-align: center;
+	font-size:  24px;
+	padding:    10px;
+	color:      white;
+	transition: opacity 1s cubic-bezier(0.600, 0.040, 0.980, 0.335);
+	opacity:    0;
+}
+
+.greeting.show {
+	opacity: 1;
+}
+
+.greeting-lang {
+	display:    block;
+	margin-top: 0.6em;
+	font-size:  16px;
+	color:      #a0a0a0;
+	opacity:    0;
+}
+.show .greeting-lang {
+	opacity: 1;
+}
+
+ */
